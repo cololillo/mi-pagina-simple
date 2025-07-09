@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mi Página Simple</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #f0f0f0;
+        }
+        header {
+            background-color: #007bff;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        nav button {
+            margin: 5px;
+            padding: 10px 15px;
+            cursor: pointer;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            border-radius: 4px;
+        }
+        nav button:hover {
+            background-color: #0056b3;
+        }
+        section {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            min-height: 150px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Mi Página Simple con Opciones</h1>
+    </header>
+
+    <nav>
+        <button onclick="mostrarContenido('inicio')">Inicio</button>
+        <button onclick="mostrarContenido('about')">Sobre mí</button>
+        <button onclick="mostrarContenido('contacto')">Contacto</button>
+        <button onclick="mostrarContenido('video')">Vídeo</button>
+    </nav>
+
+    <section id="contenido">
+        <h2>Bienvenido</h2>
+        <p>Haz clic en los botones para ver contenido diferente sin recargar la página.</p>
+    </section>
+
+    <script>
+        function mostrarContenido(seccion) {
+            const contenido = document.getElementById('contenido');
+
+            if (seccion === 'inicio') {
+                contenido.innerHTML = `
+                    <h2>Inicio</h2>
+                    <p>Esta es la sección de inicio de la página.</p>
+                `;
+            } else if (seccion === 'about') {
+                contenido.innerHTML = `
+                    <h2>Sobre mí</h2>
+                    <p>Aquí puedes poner información sobre ti o tu proyecto.</p>
+                `;
+            } else if (seccion === 'contacto') {
+                contenido.innerHTML = `
+                    <h2>Contacto</h2>
+                    <p>Correo: Davidam69@gmail.com</p>
+                    <p>Teléfono: +34 604298920</p>
+                `;
+            } else if (seccion === 'video') {
+                contenido.innerHTML = `
+                    <h2>Vídeo de YouTube</h2>
+                    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/xRPjKQtRXR8?si=_rO_tmYTNFwXez8m" 
+                        title="YouTube video player" frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                `;
+            }
+        }
+    </script>
+</body>
+</html>
