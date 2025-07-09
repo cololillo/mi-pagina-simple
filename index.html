@@ -281,10 +281,25 @@
       <div class="crypto-row"><span>Precio USD:</span> <span id="btc-price">Cargando...</span></div>
     </section>
 
+    <section class="widget" aria-label="Canal X de Cololillo">
+      <h2>X</h2>
+      <a class="youtube-link" href="https://x.com/Cololillo2" target="_blank" rel="noopener noreferrer">Cuenta de Cololillo</a>
+    </section>
+
+    <section class="widget" aria-label="Canal Instagram de Cololillo">
+      <h2>Instagram</h2>
+      <a class="youtube-link" href="https://www.instagram.com/cololillo_21/" target="_blank" rel="noopener noreferrer">Cuenta de Cololillo</a>
+    </section>
+
+
+
+
     <section class="widget" aria-label="Canal YouTube de Cololillo">
       <h2>YouTube</h2>
-      <a class="youtube-link" href="https://www.youtube.com/@cololillo" target="_blank" rel="noopener noreferrer">Canal de Cololillo</a>
+      <a class="youtube-link" href="https://www.youtube.com/@MrCololillo" target="_blank" rel="noopener noreferrer">Canal de Cololillo</a>
     </section>
+
+
 
     <section class="widget" aria-label="Chat en vivo con IA">
       <h2>Chat IA</h2>
@@ -517,6 +532,107 @@ body {
     border-radius: 8px;
   }
 </style>
+
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Video de fondo superpuesto</title>
+<style>
+  /* Video de fondo */
+  #video-fondo {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+  }
+
+  /* Contenido encima del video */
+  .contenido {
+    position: relative;
+    z-index: 1;
+    color: white;
+    padding: 20px;
+  }
+</style>
+</head>
+<body>
+
+<video autoplay muted loop id="video-fondo">
+  <source src="Pantalla.mp4" type="video/mp4" />
+  Tu navegador no soporta la reproducción de video.
+</video>
+
+<div class="contenido">
+  <h1>Contenido sobre el video</h1>
+  <p>Este texto está encima del video que se reproduce en el fondo.</p>
+</div>
+
+
+
+<h1>Reproductor Spotify</h1>
+
+<iframe
+  src="https://open.spotify.com/embed/playlist/37i9dQZF1DXcBWIGoYBM5M"
+  width="300"
+  height="380"
+  frameborder="0"
+  allowtransparency="true"
+  allow="encrypted-media"
+></iframe>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Reproductor Twitch Embebido</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #000;
+        }
+        iframe {
+            border: none;
+            width: 960px;
+            height: 540px;
+        }
+    </style>
+</head>
+<body>
+    <iframe
+        src="https://player.twitch.tv/?channel=raidergo&enableExtensions=true&muted=false&parent=localhost&player=popout&quality=auto&volume=1"
+        allowfullscreen
+        scrolling="no"
+        frameborder="0"
+        sandbox="allow-scripts allow-same-origin allow-popups"
+    ></iframe>
+
+
+
+
+
+
 
 
 
